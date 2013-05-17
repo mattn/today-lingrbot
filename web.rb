@@ -1,14 +1,11 @@
 # -*- coding: utf-8 -*-
-require "json"
-require "sinatra"
-require "rexml/document"
-require "open-uri"
-require "time"
+require 'bundler'
+
+Dir.chdir File.dirname(__FILE__)
+Bundler.require
+set :environment, :production
 
 set :protection, :except => :ip_spoofing
-
-#set :bind, 'tonic-water.com'
-set :port, 11610
 
 def today(*args)
   if args.size == 0
