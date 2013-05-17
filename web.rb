@@ -6,7 +6,7 @@ require "open-uri"
 require "time"
 
 #set :bind, 'tonic-water.com'
-set :port, 10086
+set :port, 11610
 
 def today(*args)
   if args.size == 0
